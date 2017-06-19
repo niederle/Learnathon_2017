@@ -53,7 +53,8 @@ public class CalculateMean<T extends RealType<T>> implements Command {
         
         T mean = opService.stats().mean(image);
 
-        uiService.showDialog("result is "+mean);
+        double meanValue = mean.getRealDouble();
+        uiService.showDialog("result is "+ meanValue);
 
     	//uiService.showDialog("hello");
     }
